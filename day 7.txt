@@ -1,0 +1,55 @@
+Raise Provide order
+
+
+1.Pre-order placement order
+
+-> Take Id  for raise provide order
+-> Login into CMC portal
+-> ID, Ticket reference number
+-> Select the ticket 
+-> Customer Request(Agent is trying to regrade during offering it was not dispatch)
+-> In this senario it was an Order placement issue so we reject it.
+
+
+2.Cease order
+
+-> Take Date,Time and Product reference number
+-> Check product is Dispatch or not yet
+-> Open pulse portal for tracking the ID
+-> Copy the Order ID and Check Order raised time in Inventory DB
+-> In this case customer ID is mismached
+-> Copy CLI from Inventory DB
+-> Go to Kofax portal
+-> Kofax-> Customer-> Customer In active/ceased
+-> For cross validation pulse-> SFo->Check date-> content-> customer ID
+
+Parked Order progression
+
+1.Cancled by himself 
+
+-> Take Parked order progression ticket from Inventory DB
+-> Cross validation in CMC portal
+-> In this case tiket closed by himself
+
+Why are we seeing parked order progression tickets?
+-> when ever customer is moving out we make as parked.
+RCA : BB or APIGEE not returing responce.
+Process: fing the parked order and trigger to payload
+
+2. Open Intalio->Administrator-> processor-> find parked order-> service ID
+ service ID->CMC portal-> copy portal-> copy Customer ID-> Inventory DB
+-> produt ID-> heck order status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
